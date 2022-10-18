@@ -16,3 +16,5 @@ https://hciintro22-nakagaki.plopes.org/wiki/doku.php?id=mini-project-1-robust-ge
 
 4. Now you are ready for carefully designing your main user study that finds which of the two gestures is more robust against accidental activation.
 Reflect on your findings in your talk. Tell us what you think might explain the results.
+
+Project Description
