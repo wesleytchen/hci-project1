@@ -36,7 +36,7 @@ void mousePressed() {
 
 void gyroscopeUpdated(float x, float y, float z) {
     if (!spinned && !love_tapped) {
-        if (z > 8) {
+        if (abs(z) > 8) {
             spinned = true;
         }
     }
