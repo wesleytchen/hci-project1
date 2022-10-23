@@ -12,11 +12,11 @@ void draw() {
     textSize(32);
 
     if (spinned) {
-        text('Spinned! Tap to reset.', 10, 70);
+        text('Precision Spinned! Tap to reset.', 10, 70);
     }
 
     if (love_tapped) {
-        text('Love tapped! Tap to reset.', 10, 70);
+        text('Hard punched! Tap to reset.', 10, 70);
     }
 
     if (!spinned && !love_tapped) {
