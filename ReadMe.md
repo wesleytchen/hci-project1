@@ -26,3 +26,5 @@ To test Accuracy, we will ask  each participant to punch the phone 10 times and 
 To test robustness, we will ask them to perform 2 tasks. For the first task, we will ask participants to walk around the building holding their phone. For the second task, we will ask participants to draw a "C" onto the screen." In both cases we will test whether the motion sensor is triggered.
 
 Link of demonstration: https://youtu.be/UxBddjd32Bg
+
+Link of presentation: https://docs.google.com/presentation/d/10sd7aQPNiUu46XIdmSwAifoyigWb6wGphyZ4XPFFB6Y/edit?usp=sharing
