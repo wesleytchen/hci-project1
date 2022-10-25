@@ -19,8 +19,8 @@ Reflect on your findings in your talk. Tell us what you think might explain the 
 
 ## Project Description
 There are two motions detected by our phone: 
-  1. lovetap
-  2. spin
+  1. hard punch
+  2. precision spin
 To test Accuracy, we will ask  each participant to punch the phone 10 times and spin the phone 10 times. We will record the results.
 
 To test robustness, we will ask them to perform 2 tasks. For the first task, we will ask participants to walk around the building holding their phone. For the second task, we will ask participants to draw a "C" onto the screen." In both cases we will test whether the motion sensor is triggered.
