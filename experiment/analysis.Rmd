@@ -21,27 +21,61 @@ Null hypothesis is that spin_success <= 70%
 t.test(data$spin_success, alternative = "greater", mu = 7)
 ```
 
-Testing that we don't have false activations of "Hard Punch" when performing "Precision Spin".
-Null hypothesis is that number of activations is greater than 1.
+Testing that we don't have false activations of "Hard Punch" when performing "Precision Spin". Testing that we don't have false activations of "Precision Spin" when performing "Hard Punch".
+
+Two sample T-test
 ```{r}
-t.test(data$punch_activation_when_expect_spin, alternative = "less", mu = 1)
+t.test(x=data$punch_activation_when_expect_spin, y= data$spin_activation_when_expect_punch, paired=TRUE)
 ```
 
-
-Testing that we don't have false activations of "Precision Spin" when performing "Hard Punch".
-Null hypothesis is that number of activations is greater than 1.
-```{r}
-t.test(data$spin_activation_when_expect_punch, alternative = "less", mu = 1)
-```
 
 Testing that we don't have false activations when walking.
-Null hypothesis is that number of activations is greater than 1.
+
+Two-sample T-test
 ```{r}
-t.test(data$activations_during_walk, alternative = "less", mu = 1)
+t.test(x=data$punch_activations_during_walk, y= data$spin_activations_during_walk, paired=TRUE)
+
 ```
 
 Testing that we don't have false activations when drawing.
-Null hypothesis is that number of activations is greater than 1.
+Two sample T-test
 ```{r}
-t.test(data$activations_during_draw, alternative = "less", mu = 1)
+t.test(x=data$punch_activations_during_draw, y= data$spin_activations_during_draw, paired=TRUE)
+```
+
+Boxplot section
+```{r}
+boxplot(data$hard_punch_success, main="Hard Punch Reliability",
+   xlab = "Hard Punch", ylab="Number successes per 10")
+```
+
+```{r}
+boxplot(data$spin_success, main="Precision Spin Reliability",
+   xlab = "Precision Spin", ylab="Number successes per 10")
+```
+
+```{r}
+Punch <- data$punch_activation_when_expect_spin
+Spin <- data$spin_activation_when_expect_punch
+walk_data <- data.frame(Spin, Punch)
+boxplot(walk_data, main="Cross-Gesture Robustness",
+   ylab="Number per trial")
+```
+
+
+```{r}
+Punch <- data$punch_activations_during_walk
+Spin <- data$spin_activations_during_walk
+walk_data <- data.frame(Spin, Punch)
+boxplot(walk_data, main="Accidental Activation during Everyday Activities",
+   ylab="Number per trial")
+```
+
+
+```{r}
+Punch <- data$punch_activations_during_draw
+Spin <- data$spin_activations_during_draw
+walk_data <- data.frame(Spin, Punch)
+boxplot(walk_data, main="Accidental Activation during Phone Use",
+   ylab="Number per trial")
 ```
